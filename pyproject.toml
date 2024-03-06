@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "transnet"
+version = "0.1.0"
+description = ""
+authors = ["Dinh Minh Toan <toandinh6501@outlook.com>"]
+readme = "README.md"
+packages = [{include = "transnet"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+tensorflow="1.12.0"
+protobuf="3.20.3"
+ffmpeg-python="0.2.0"
+pillow="9.5.0"

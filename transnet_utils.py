@@ -27,12 +27,22 @@ def draw_video_with_predictions(frames: np.ndarray, predictions: np.ndarray, thr
         predictions = np.concatenate([predictions, np.zeros([pad_with], np.float32)])
     height = len(frames) // width
 
+    for index, frame in enumerate(frames):
+        print(index)
+        scene = frame.reshape([height, width, ih, iw, ic])
+        scene = np.concatenate(np.split(
+            np.concatenate(np.split(scene, height), axis=2)[0], width
+        ), axis=2)[0]
+        img = Image.fromarray(scene)
+        img.save(f"frame_{index}.png")
+
     scene = frames.reshape([height, width, ih, iw, ic])
     scene = np.concatenate(np.split(
         np.concatenate(np.split(scene, height), axis=2)[0], width
     ), axis=2)[0]
 
     img = Image.fromarray(scene)
+    img.save()
     draw = ImageDraw.Draw(img)
 
     adjusted_pred = predictions  # make it more visible
