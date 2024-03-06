@@ -144,3 +144,7 @@ venv.bak/
 # frames
 frames/*
 !frames/.gitkeep
+
+# vids
+vids/*
+!vids/.gitkeep
