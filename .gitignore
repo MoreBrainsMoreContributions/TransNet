@@ -148,3 +148,7 @@ frames/*
 # vids
 vids/*
 !vids/.gitkeep
+
+# keyframes
+keyframes/*
+!keyframes/.gitkeep
