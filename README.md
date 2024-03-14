@@ -38,3 +38,7 @@ See `example.ipynb` jupyter notebook file for an example how to generate shot bo
 
 
 conda env export > environment.yml
+
+conda env create -f environment.yaml
+
+conda activate transnetv1
