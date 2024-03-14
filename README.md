@@ -35,3 +35,6 @@ or
     
 ## How to use it?
 See `example.ipynb` jupyter notebook file for an example how to generate shot boundaries for your video.
+
+
+conda env export > environment.yml
