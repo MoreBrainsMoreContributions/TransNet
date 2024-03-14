@@ -42,3 +42,9 @@ conda env export > environment.yml
 conda env create -f environment.yaml
 
 conda activate transnetv1
+
+conda create -n tensorflow1.15 python=3.5
+conda activate tensorflow1.15
+conda install cudatoolkit=10.0
+conda install cudnn=7.3.1
+pip3 install tensorflow-gpu==1.15
